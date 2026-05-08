@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Fuvarok {
     private static List<Auto> autok = new ArrayList<>();
@@ -38,6 +40,7 @@ public class Fuvarok {
         legolcsobbFuvar();
         kartyasFizetesek();
         mindenFizetesiModMeghatarozott();
+        autoDarab();
     }
     
     /*1. összes fuvar értéke
@@ -139,5 +142,18 @@ public class Fuvarok {
             "5. Minden fizetési mód meghatározott."
         );
     }
+}
+    private static void autoDarab() {
+
+    Set<String> rendszamok = new HashSet<>();
+
+    for (Auto auto : autok) {
+        rendszamok.add(auto.getRsz());
+    }
+
+    System.out.println(
+        "6. Autók száma: "
+        + rendszamok.size()
+    );
 }
 }
