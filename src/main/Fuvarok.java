@@ -28,7 +28,8 @@ public class Fuvarok {
             System.out.println(
                 auto.getRsz() + " " +
                 auto.getIdo() + " " +
-                auto.getOsszeg()
+                auto.getOsszeg() + " " +
+                auto.getFizetesiMod()
             );
 }
     }
